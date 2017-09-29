@@ -1,0 +1,31 @@
+{
+    "About": {
+        "Name": "File Infos Object",
+        "Author": "Conceptgame",
+        "Copyright": "Copyright (C) 2017 Conceptgame",
+        "Comment": "Get file infos from a file",
+        "URL": "",
+        "Help": "",
+        "Identifier": "FIIN"
+    },
+    "ExpressionMenu": [
+		"Separator",
+        [
+            0,
+            "Get File Infos"
+        ],
+		"Separator"
+    ],
+    "Expressions": [
+        {
+            "Title": "FileInfos(",
+            "Returns": "Text",
+            "Parameters": [
+                [
+                    "Text",
+                    "File Path"
+                ]
+            ]
+        }
+    ]
+}
