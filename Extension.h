@@ -27,8 +27,8 @@ public:
         and destructors, without having to call them manually or store
         a pointer.
     */
-		wstring propertyStr;
-	
+	string imagePath;
+
     /*  Add your actions, conditions and expressions as real class member
         functions here. The arguments (and return type for expressions) must
         match EXACTLY what you defined in the JSON.
@@ -36,14 +36,13 @@ public:
         Remember to link the actions, conditions and expressions to their
         numeric IDs in the class constructor (Extension.cpp)
     */
-		void AppendStorageTree(const WCHAR *pwszStorageName, IStorage *pStg);
-		void AppendPropertySetsInStorage(const WCHAR *pwszStorageName, IPropertySetStorage *pPropSetStg);
-		void AppendPropertySet(FMTID fmtid, const WCHAR *pwszStorageName, IPropertyStorage *pPropStg);
-		void AppendProperty(const PROPVARIANT &propvar, const STATPROPSTG &statpropstg);
 		/// Expressions
-		wstring GetFileInfos(LPCWSTR filePath);
+		TCHAR* ExifMetadata(TCHAR* filePath);
+		/// Actions
+		void SetFile(TCHAR* filePath);
+		void SetExifMetadata(TCHAR* exifkey, TCHAR* value);
 
-
+		
     /* These are called if there's no function linked to an ID */
 
     void Action(int ID, LPRDATA rdPtr, long param1, long param2);

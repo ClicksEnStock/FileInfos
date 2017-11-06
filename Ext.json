@@ -1,29 +1,56 @@
 {
     "About": {
-        "Name": "File Infos Object",
+        "Name": "EXIV2 Object",
         "Author": "Conceptgame",
         "Copyright": "Copyright (C) 2017 Conceptgame",
-        "Comment": "Get file infos from a file",
+        "Comment": "Get metadata from an image file (for example image metadata)",
         "URL": "",
         "Help": "",
-        "Identifier": "FIIN"
+        "Identifier": "EXIV"
     },
+    "ActionMenu": [ 
+           "Separator", 
+   		[ 
+               0, 
+               "Set image file path" 
+          ],
+          [ 
+               1, 
+               "Set Exif metadatum" 
+          ],  
+		  "Separator" 
+     ],
     "ExpressionMenu": [
-		"Separator",
+        "Separator",
         [
             0,
-            "Get File Infos"
+            "ExifMetadata"
         ],
-		"Separator"
+        "Separator"
+    ],
+    "Actions": [
+        {
+            "Title": "Set image file path to %0",
+            "Parameters": [
+                [ "Text", "File Path" ]
+            ]
+        },
+        {
+            "Title": "Set Exif metadatum %0 to %1",
+			"Parameters": [
+                [ "Text", "Exif metadata key" ],
+                [ "Text", "String value to set"]
+			]
+        }
     ],
     "Expressions": [
         {
-            "Title": "FileInfos(",
+            "Title": "ExifMetadata$(",
             "Returns": "Text",
             "Parameters": [
                 [
                     "Text",
-                    "File Path"
+                    "Key name"
                 ]
             ]
         }

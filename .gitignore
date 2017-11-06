@@ -45,3 +45,27 @@ $RECYCLE.BIN/
 Network Trash Folder
 Temporary Items
 .apdisk
+FileInfos.vcxproj.user
+.vs/FileInfos/v14/.suo
+FileInfos.v12.suo
+DebugUnicode/vc120.pdb
+DebugUnicode/Template.exp
+*.obj
+DebugUnicode/FileInfos.tlog/rc.write.1.tlog
+*.tlog
+DebugUnicode/Ext.res
+*.log
+DebugUnicode/Template.lib
+*.pdb
+DebugUnicode/vc120.idb
+Pixel.v12.suo
+ReleaseEditorUnicode/Ext.res
+ReleaseEditorUnicode/Template.exp
+ReleaseEditorUnicode/Template.lib
+ReleaseEditorUnicode/vc120.idb
+ReleaseRuntimeUnicode/Ext.res
+ReleaseRuntimeUnicode/Template.exp
+ReleaseRuntimeUnicode/Template.lib
+ReleaseRuntimeUnicode/vc120.idb
+Exiv2.v12.suo
+exiv2.exe

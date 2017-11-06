@@ -10,13 +10,14 @@ Extension::Extension(LPRDATA _rdPtr, LPEDATA edPtr, fpcob cobPtr)
     : rdPtr(_rdPtr), rhPtr(_rdPtr->rHo.hoAdRunHeader), Runtime(_rdPtr)
 {
 
-	wstring propertyStr = _T("");
     /*
         Link all your action/condition/expression functions to their IDs to match the
         IDs in the JSON here
     */
-
-    LinkExpression(0, GetFileInfos);
+	LinkAction(0, SetFile);
+	LinkAction(1, SetExifMetadata);
+	
+	LinkExpression(0, ExifMetadata);
 	
 	/*
         This is where you'd do anything you'd do in CreateRunObject in the original SDK
@@ -25,6 +26,7 @@ Extension::Extension(LPRDATA _rdPtr, LPEDATA edPtr, fpcob cobPtr)
         anything from edPtr to the extension class here.
     
     */
+	imagePath = "";
 }
 
 Extension::~Extension()
