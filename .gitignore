@@ -45,3 +45,18 @@ $RECYCLE.BIN/
 Network Trash Folder
 Temporary Items
 .apdisk
+*.pdb
+ReleaseRuntimeUnicode/Template.lib
+*.idb
+ReleaseRuntimeUnicode/Runtime.obj
+ReleaseRuntimeUnicode/ObjectSelection.obj
+*.obj
+*.tlog
+*.log
+*.exp
+DebugUnicode/Template.lib
+.vs/FileInfos/v14/.suo
+DebugUnicode/Ext.res
+ReleaseEditorUnicode/Template.lib
+FileInfos.v12.suo
+FileInfos.vcxproj.user
