@@ -4,7 +4,6 @@
 // Convert an UTF8 string to wchar_t*
 wchar_t* utf8_decode(const std::string &str)
 {
-	if (str.empty()) return nullptr;
 	int wchars_num = MultiByteToWideChar(CP_UTF8, 0, str.c_str(), -1, NULL, 0);
 	wchar_t* wstr = new wchar_t[wchars_num];
 	MultiByteToWideChar(CP_UTF8, 0, str.c_str(), -1, wstr, wchars_num);
@@ -31,9 +30,15 @@ TCHAR* Extension::ExifMetadata(TCHAR* exifkey)
 					if (pos != exifData.end())
 					{
 						metadatum = &(*pos);
-						svalue = metadatum->toString();
+						if (strcmp(metadatum->key().c_str(), "Exif.Image.XPComment") == 0)
+						{
+							svalue = metadatum->print(&exifData);
+						}
+						else
+						{
+							svalue = metadatum->toString();
+						}
 					}
-					
 					return utf8_decode(svalue);
 				}
 				catch (Exiv2::AnyError& e) {
